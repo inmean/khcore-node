@@ -1,15 +1,19 @@
 {
-  "name": "litecore-node",
-  "description": "Full node with extended capabilities using Litecore and Litecoin Core",
+  "name": "khcore-node",
+  "description": "Full node with extended capabilities using KHcore and KHcoin Core",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.1.11",
+  "version": "3.1.12",
   "main": "./index.js",
-  "repository": "git://github.com/litecoin-project/litecore-node.git",
-  "homepage": "https://github.com/litecoin-project/litecore-node",
+  "repository": "git://github.com/inmean/khcore-node.git",
+  "homepage": "https://github.com/inmean/khcore-node",
   "bugs": {
-    "url": "https://github.com/litecoin-project/litecore-node/issues"
+    "url": "https://github.com/inmean/khcore-node/issues"
   },
   "contributors": [
+    {
+      "name": "In Mean",
+      "email": "inmean@khmercrypto.com"
+    },
     {
       "name": "Charlie Lee",
       "email": "coblee@litecoin.org"
@@ -35,8 +39,8 @@
     }
   ],
   "bin": {
-    "litecore-node": "./bin/litecore-node",
-    "litecoind": "./bin/litecoind"
+    "khcore-node": "./bin/khcore-node",
+    "khcoind": "./bin/khcoind"
   },
   "scripts": {
     "preinstall": "./scripts/download",
@@ -48,8 +52,8 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "litecoin",
-    "litecoind"
+    "khcoin",
+    "khcoind"
   ],
   "dependencies": {
     "async": "^1.3.0",
@@ -59,8 +63,8 @@
     "errno": "^0.1.4",
     "express": "^4.13.3",
     "liftoff": "^2.2.0",
-    "litecoind-rpc": "^0.7.1",
-    "litecore-lib": "^0.13.22",
+    "khcoind-rpc": "^0.7.1",
+    "khcore-lib": "^0.13.22",
     "lru-cache": "^4.0.1",
     "mkdirp": "0.5.0",
     "path-is-absolute": "^1.0.0",
@@ -75,7 +79,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "litecore-p2p": "^1.1.2",
+    "khcore-p2p": "^1.1.2",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",

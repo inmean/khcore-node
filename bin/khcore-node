@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var khcore = require('../lib/cli/bitcore');
+khcore();
