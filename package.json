@@ -1,11 +1,49 @@
 {
-  "name": "khcore-node",
-  "description": "Full node with extended capabilities using KHcore and KHcoin Core",
-  "author": "BitPay <dev@bitpay.com>",
-  "version": "3.1.12",
-  "main": "./index.js",
-  "repository": "git://github.com/inmean/khcore-node.git",
-  "homepage": "https://github.com/inmean/khcore-node",
+  "_args": [
+    [
+      "khcore-node@^3.1.12",
+      "/home/inmean/khcore"
+    ]
+  ],
+  "_from": "khcore-node@>=3.1.12 <4.0.0",
+  "_id": "khcore-node@3.1.12",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/khcore-node",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/khcore-node-3.1.12.tgz_1508603602980_0.0097796730697155"
+  },
+  "_npmUser": {
+    "email": "inmean@khmercrypto.com",
+    "name": "inmean"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "khcore-node",
+    "raw": "khcore-node@^3.1.12",
+    "rawSpec": "^3.1.12",
+    "scope": null,
+    "spec": ">=3.1.12 <4.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_shasum": "e06152dd7fc8351102ea913a3afdc7ca74d54b43",
+  "_shrinkwrap": null,
+  "_spec": "khcore-node@^3.1.12",
+  "_where": "/home/inmean/khcore",
+  "author": {
+    "email": "dev@bitpay.com",
+    "name": "BitPay"
+  },
+  "bin": {
+    "khcoind": "./bin/khcoind",
+    "khcore-node": "./bin/khcore-node"
+  },
   "bugs": {
     "url": "https://github.com/inmean/khcore-node/issues"
   },
@@ -38,57 +76,77 @@
       "email": "loshan1212@gmail.com"
     }
   ],
-  "bin": {
-    "khcore-node": "./bin/khcore-node",
-    "khcoind": "./bin/khcoind"
-  },
-  "scripts": {
-    "preinstall": "./scripts/download",
-    "verify": "./scripts/download --skip-bitcoin-download --verify-bitcoin-download",
-    "test": "mocha -R spec --recursive",
-    "regtest": "./scripts/regtest",
-    "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
-    "coverage": "istanbul cover _mocha -- --recursive",
-    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
-  },
-  "tags": [
-    "khcoin",
-    "khcoind"
-  ],
   "dependencies": {
     "async": "^1.3.0",
     "body-parser": "^1.13.3",
+    "bufferutil": "~1.2.1",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
     "errno": "^0.1.4",
     "express": "^4.13.3",
-    "liftoff": "^2.2.0",
     "khcoind-rpc": "^0.7.1",
     "khcore-lib": "^0.13.22",
+    "liftoff": "^2.2.0",
     "lru-cache": "^4.0.1",
     "mkdirp": "0.5.0",
     "path-is-absolute": "^1.0.0",
     "semver": "^5.0.1",
     "socket.io": "^1.4.5",
     "socket.io-client": "^1.4.5",
+    "utf-8-validate": "~1.2.1",
     "zeromq": "^4.2.0"
   },
-  "optionalDependencies": {
-    "bufferutil": "~1.2.1",
-    "utf-8-validate": "~1.2.1"
-  },
+  "description": "Full node with extended capabilities using KHcore and KHcoin Core",
   "devDependencies": {
     "benchmark": "1.0.0",
-    "khcore-p2p": "^1.1.2",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.1.0",
+    "khcore-p2p": "^1.1.2",
     "mocha": "^2.4.5",
     "proxyquire": "^1.3.1",
     "rimraf": "^2.4.2",
     "sinon": "^1.15.4"
   },
-  "license": "MIT"
+  "directories": {},
+  "dist": {
+    "shasum": "e06152dd7fc8351102ea913a3afdc7ca74d54b43",
+    "tarball": "https://registry.npmjs.org/khcore-node/-/khcore-node-3.1.12.tgz"
+  },
+  "gitHead": "be0cd40ef806dfdf020d2918e3fab80f022e135b",
+  "homepage": "https://github.com/inmean/khcore-node",
+  "license": "MIT",
+  "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "inmean",
+      "email": "inmean@khmercrypto.com"
+    }
+  ],
+  "name": "khcore-node",
+  "optionalDependencies": {
+    "bufferutil": "~1.2.1",
+    "utf-8-validate": "~1.2.1"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inmean/khcore-node.git"
+  },
+  "scripts": {
+    "coverage": "istanbul cover _mocha -- --recursive",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
+    "preinstall": "./scripts/download",
+    "regtest": "./scripts/regtest",
+    "test": "mocha -R spec --recursive",
+    "verify": "./scripts/download --skip-bitcoin-download --verify-bitcoin-download"
+  },
+  "tags": [
+    "khcoin",
+    "khcoind"
+  ],
+  "version": "3.1.12"
 }
